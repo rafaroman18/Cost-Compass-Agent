@@ -1,5 +1,6 @@
 # Chunks folder
 chunks/
+chunks.jsonl
 
 # Secrets
 .env
@@ -28,3 +29,8 @@ Steps/Step 1 - Data and domain/Prices/
 .claude/
 .claude-plugin/
 plugins/
+
+# Step 4: chunks and embeddings come from PDFs that cannot be redistributed.
+# They are regenerated with the scripts in Step 4.
+Steps/Step 4 - RAG Benchmark/chunks/
+*.npy

@@ -50,7 +50,7 @@ def process_all_pdfs(data_path: str = "Steps/Step 1 - Data and domain"):
         print(f"[{i}/{len(pdf_paths)}] {pdf_path.name}: {len(chunks)} chunks")
 
     # We will append all chunks into one big file also
-    with open(f"Steps/Step 4 - RAG Benchmark/chunks/chunks.jsonl", "w", encoding="utf-8") as f:
+    with open(f"Steps/Step 4 - RAG Benchmark/chunks.jsonl", "w", encoding="utf-8") as f:
         for chunk in all_chunks:
             f.write(json.dumps(chunk, ensure_ascii=False) + "\n")
 
@@ -81,9 +81,9 @@ def process_pdfs(pdf_path: str, block: str):
         chunks += split_page_in_chunks(text, page_number, file_name, block)
 
     # Saving the chunks into a .jsonl file (one chunk per line)
-    with open(f"Steps/Step 4 - RAG Benchmark/chunks/chunks_{file_name}.jsonl", "w", encoding="utf-8") as f:
-        for chunk in chunks:
-            f.write(json.dumps(chunk, ensure_ascii=False) + "\n")
+    # with open(f"Steps/Step 4 - RAG Benchmark/chunks/chunks_{file_name}.jsonl", "w", encoding="utf-8") as f:
+    #     for chunk in chunks:
+    #         f.write(json.dumps(chunk, ensure_ascii=False) + "\n")
 
     return chunks
 
