@@ -1,0 +1,30 @@
+# Chunks folder
+chunks/
+
+# Secrets
+.env
+
+# Python
+venv*/
+.venv/
+__pycache__/
+*.pyc
+
+# macOS and editor
+.DS_Store
+.vscode/
+
+# Generated databases
+*.db
+
+# Step 1 data (PDFs and CSVs): licences do not allow redistribution.
+# The manifest "Step 1 - Data and domain.md" is kept.
+Steps/Step 1 - Data and domain/Housing/
+Steps/Step 1 - Data and domain/Employment/
+Steps/Step 1 - Data and domain/Energy/
+Steps/Step 1 - Data and domain/Prices/
+
+# Tooling folders
+.claude/
+.claude-plugin/
+plugins/
