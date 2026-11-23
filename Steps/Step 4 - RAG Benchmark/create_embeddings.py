@@ -8,7 +8,7 @@ def create_embeddings():
     chunks = []
 
     # Extracting the text from the chunks
-    with open("Steps/Step 4 - RAG Benchmark/chunks/chunks.jsonl", "r") as f:
+    with open("Steps/Step 4 - RAG Benchmark/chunks.jsonl", "r") as f:
 
         # Inserting the chunks into a list
         for l in f.read().split('\n'):
