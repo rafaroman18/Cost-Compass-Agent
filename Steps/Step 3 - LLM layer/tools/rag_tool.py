@@ -13,5 +13,6 @@ async def rag_tool_router(ctx: RunContext[None], data_to_retrieve: str) -> dict:
         Returns:
             dict: Un diccionario que contiene la información requerida y las consultas lanzadas.
     """
-    
+
+    # q = model.encode("la pregunta del usuario", normalize_embeddings=True)
     return {'data': 'Test_data', 'SQL': 'SELECT * FROM precio_vivienda_2024'}
