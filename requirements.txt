@@ -122,3 +122,5 @@ wcwidth==0.9.4
 websockets==17.4
 wrapt==2.5.2
 fonttools==4.68.0
+rank-bm25
+nltk

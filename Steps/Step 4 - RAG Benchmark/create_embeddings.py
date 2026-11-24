@@ -4,12 +4,19 @@ import json
 import numpy as np
 import time
 
-def create_embeddings():
+def create_embeddings(chunks_path: str):
+    """
+    Creates a vector embeddings (embeddings.npy file) from the chunks file provided. 
+
+    Params:
+
+        chunks_path: The path of the .jsonl chunks file
+    """
 
     chunks = []
 
     # Extracting the text from the chunks
-    with open("/kaggle/input/datasets/rafaroman18/chunks/chunks.jsonl", "r") as f:
+    with open(chunks_path, "r") as f:
 
         # Inserting the chunks into a list
         for l in f.read().split('\n'):
@@ -53,4 +60,4 @@ def create_embeddings():
     print('Embeddings created!')
 
 if __name__ == "__main__":
-    create_embeddings()
+    create_embeddings("Steps/Step 4 - RAG Benchmark/chunks.jsonl")

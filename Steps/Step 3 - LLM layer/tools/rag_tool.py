@@ -14,5 +14,15 @@ async def rag_tool_router(ctx: RunContext[None], data_to_retrieve: str) -> dict:
             dict: Un diccionario que contiene la información requerida y las consultas lanzadas.
     """
 
-    # q = model.encode("la pregunta del usuario", normalize_embeddings=True)
+    chunks = []
+
+    # Insert the similar chunks into text
+    retrieved_text = """"""
+    for i, c in enumerate(chunks):
+        retrieved_text += f"[{i+1}] {c['file']}, page {c['page']}, block: {c['block']}\n{c['chunk']}\n\n" 
+        
+        return retrieved_text
+    
     return {'data': 'Test_data', 'SQL': 'SELECT * FROM precio_vivienda_2024'}
+
+    
